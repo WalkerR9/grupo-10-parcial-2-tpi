@@ -4,11 +4,18 @@
 <head>
 	<title>El Aragan</title>
 	<meta charset="utf-8" />
+
 	<link rel="stylesheet" href="appGrupo10/css/bootstrap.min.css">
+	<link rel="stylesheet" href="appGrupo10/css/dataTables.bootstrap5.min.css">
+	<script src="appGrupo10/js/jquery-3.6.0.min.js"></script>
 	<script src="appGrupo10/js/bootstrap.bundle.min.js"></script>
+	<script src="appGrupo10/js/jquery.dataTables.min.js"></script>
+	<script src="appGrupo10/js/dataTables.bootstrap5.min.js"></script>
+
+	<script src="appGrupo10/js/codigo.js"></script>
 </head>
 
-<body>
+<body onload="obtenerProductos();">
 
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: brown;">
 		<div class="container-fluid">
@@ -38,7 +45,27 @@
 		</div>
 	</nav>
 
-	
+	<div class="container-md">
+		<p class="display-3">MUEBLERIA EL ARAGAN</p>
+		<div id="listado">
+
+			<table id="tabla" class="table table-hover" border="1" onshow="">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>FOTO</th>
+						<th id="price">PRECIO</th>
+						<th>TITULO</th>
+						<th>DESCRIPCION</th>
+						<th>CATEGORIA</th>
+					</tr>
+				</thead>
+				<tbody id="tablita"></tbody>
+			</table>
+
+
+		</div>
+	</div>
 
 
 	<!-- Remove the container if you want to extend the Footer to full width. -->

@@ -49,12 +49,12 @@ function guardar(productos) {
 	for (i = 0; i < productos.length; i++) {
 		var id = productos[i].id;
 		var foto = productos[i].imagen;
-		var precio = productos[i].precio;
-		var descripcion = productos[i].titulo;
+		var precio = productos[i].precio.toFixed(2);
+		var descripcion = productos[i].descripcion;
 		var categoria = productos[i].categoria;
 		var titulo = productos[i].titulo;
-		let img="<img src=\""+foto+"\" class=\"img-thumbnail\"  width=\"100\" height=\"100\">"
-		var fila = "<td>" + id + "</td><td>"+img+"</td><td>" + precio + "</td><td>" + descripcion + "</td><td>" + categoria + "</td><td>" + titulo + "</td>";
+		let img="<a href=\""+foto+"\" target=\"_blank\"><img src=\""+foto+"\" class=\"img-thumbnail\"  width=\"100\" height=\"100\"></a>"
+		var fila = "<td>" + id + "</td><td>"+img+"</td><td>$" + precio + "</td><td>" + titulo+ "</td><td>" + descripcion + "</td><td>" + categoria + "</td>";
 
 		var btn = document.createElement("tr");
 		btn.innerHTML = fila;
