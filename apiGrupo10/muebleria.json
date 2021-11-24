@@ -161,6 +161,22 @@
       "titulo": "Archivero 4 gavetas",
       "descripcion": "ARCHIVERO PROFESIONAL TAMANO OFICIO CON 4 GAVETAS, JALADORES DE ACERO INOXIDABLE CON CERRADURA COLOR NEGRO, ACABADO ANTICORROSIVO FOSFATIZADO, PINTURA ELECTROESTATICA LIQUIDA HORNEADA DE ALTA RESISTENCIA.",
       "categoria": "Oficina"
+    },
+    {
+      "titulo": "a",
+      "precio": "10.00",
+      "descripcion": "Caja magica",
+      "imagen": "https://midevocional.org/wp-content/uploads/2015/02/caja.jpg",
+      "categoria": "Dormitorio",
+      "id": 21
+    },
+    {
+      "titulo": "a2",
+      "precio": "10.00",
+      "descripcion": "Caja 2",
+      "imagen": "https://midevocional.org/wp-content/uploads/2015/02/caja.jpg",
+      "categoria": "Sala",
+      "id": 22
     }
   ]
 }

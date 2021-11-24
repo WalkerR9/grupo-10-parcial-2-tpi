@@ -19,6 +19,34 @@ var fila="<tr><td class='id'></td><td class='foto'></td><td class='price'></td><
                 } )
 }
 
+function guardarProductos(){
+	let producto = {
+		titulo:document.getElementById("nombre").value,
+		precio:document.getElementById("precio").value,
+		descripcion:document.getElementById("descripcion").value,
+		imagen:document.getElementById("imagen").value,
+		categoria:document.getElementById("categoria").value,
+	}
+	fetch("http://127.0.0.1:3000/muebleria",
+	{ method:"POST",
+	  body: JSON.stringify(producto),
+	  headers: {
+		 'Accept': 'application/json',
+		 'Content-type': 'application/json; charset=UTF-8',
+	  }
+	})
+	.then(response=>response.json())
+	.then(data=>productos=data);
+	alert("El mueble se ha registrado");
+	document.getElementById("nombre").value = "";
+	document.getElementById("precio").value = "";
+	document.getElementById("descripcion").value = "";
+	document.getElementById("imagen").value = "";
+
+	orden=0;
+	window.setTimeout(obtenerProductos, 500);
+}
+
 function borrarProducto(id) {
 	var delresult;
 	var url='http://localhost:3000/muebleria/'+id;

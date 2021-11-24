@@ -13,6 +13,31 @@
  <h1>… Ejemplo web api</h1>
      <p>… Sus datos personales aquí …</p>
 	 <p><button id="inventario" onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button> </p>
+	 <form action="POST" name="guardar" id="guardar" class="guardar">
+		<label for="nombre" class="nombre">Titulo:</label>
+		<input type="text" id="nombre" name="nombre" class="nombre" placeholder="Ingrese el titulo del producto">
+
+		<label for="precio" class="precio">Precio: </label>
+		<input type="text" id="precio" name="precio" class="precio" placeholder="Ingrese el precio del producto">
+
+		<label for="categoria" class="categoria">Categoria: </label>
+		<select name="categoria" class="categoria" id="categoria">
+			<option>Dormitorio</option>
+			<option>Reclinables</option>
+			<option>Sala</option>
+			<option>Oficina</option>
+		</select>
+
+		<label for="imagen" class="imagen">Imagen: </label>
+		<input type="text" id="imagen" name="imagen" class="imagen" placeholder="Ingrese la url de la imagen del producto">
+
+		<label for="descripcion" class="descripcion">Descripción: </label>
+		<input type="text" id="descripcion" name="descripcion" class="descripcion" placeholder="Ingrese la descripcion del producto">
+
+	
+
+		<input class="boton-2" type="button" id="btnguardar" name="btnguardar" value="Guardar producto" onclick="guardarProductos();">
+	</form>
 	 <div id="listado" style="display:none;">
 	 <form name="filtroprods" id="filtroprods">
 	   Seleccione Categorias 
