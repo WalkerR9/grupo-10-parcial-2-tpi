@@ -19,35 +19,11 @@
   ],
   "muebleria": [
     {
-      "id": 1,
-      "imagen": "https://siman.vtexassets.com/arquivos/ids/348763-800-auto?v=637250794114600000&width=800&height=auto&aspect=true",
-      "precio": "279.00",
-      "titulo": "Ropero 3 puertas corredizas",
-      "descripcion": "El producto cuenta con amplio espacio interno, acompañado de 3 cajones, 2 perchas de madera acabadas en gris y un lugar para zapatos en la parte inferior.",
-      "categoria": "Dormitorio"
-    },
-    {
-      "id": 2,
-      "imagen": "https://siman.vtexassets.com/arquivos/ids/981526-1600-auto?v=637418271783600000&width=1600&height=auto&aspect=true",
-      "precio": "399.00",
-      "titulo": "Gavetero con espejo Duval",
-      "descripcion": "El juego de tocador y espejo Duval, que combina un estilo elegante con una sensibilidad relajada, logra el tono perfecto para la sofisticación rústica. Las líneas bellamente limpias se realzan sutilmente con un acabado gris degradado y una textura aserrada.",
-      "categoria": "Dormitorio"
-    },
-    {
       "id": 3,
       "imagen": "https://siman.vtexassets.com/arquivos/ids/343460-800-auto?v=637250750976970000&width=800&height=auto&aspect=true",
       "precio": "549.00",
       "titulo": "Camarote full",
       "descripcion": "Camarote full full",
-      "categoria": "Dormitorio"
-    },
-    {
-      "id": 4,
-      "imagen": "https://siman.vtexassets.com/arquivos/ids/992366-800-auto?v=637423633192930000&width=800&height=auto&aspect=true",
-      "precio": "299.00",
-      "titulo": "Gavetero vertical",
-      "descripcion": "Cuando se fusionan de la manera correcta, los estilos rústico e industrial pueden hacer un matrimonio feliz. Un ejemplo: la cómoda Bernards. Una refinada toma de la belleza de la tabla del granero, su compleja y replicada veta de madera muestra indicios de tonos anaranjados quemados y verde azulado para una sensación de autenticidad desgastada por el tiempo. Los tiradores alargados de los cajones de metal elevan la estética.",
       "categoria": "Dormitorio"
     },
     {
@@ -99,14 +75,6 @@
       "categoria": "Sala"
     },
     {
-      "id": 12,
-      "imagen": "https://siman.vtexassets.com/arquivos/ids/346343-800-auto?v=637250776104600000&width=800&height=auto&aspect=true",
-      "precio": "899.00",
-      "titulo": "Sala seccional con ottoman",
-      "descripcion": "Sala seccional con ottoman color café con patas metálicas, gracias a su estilo contemporáneo podrás tenerlos por muchos años.",
-      "categoria": "Sala"
-    },
-    {
       "id": 14,
       "imagen": "https://www.prado.com.sv/media/catalog/product/1/5/153647.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700",
       "precio": "941.00",
@@ -121,62 +89,6 @@
       "titulo": "Commodity Juego de sala para Terraza / LASF3019SALA / Acero",
       "descripcion": "El mueble perfecto para tu terraza lo tiene Commodity con el Juego de sala para terraza LASF3019SALA, esta diseñado con 2 sillones individuales, 1 love seat y 1 mesita. Su estructura de acero, pintura electrostática, sillas de ratán plano, cojinería en poliéster y mesa con top de vidrio templado.",
       "categoria": "Sala"
-    },
-    {
-      "id": 16,
-      "imagen": "https://siman.vtexassets.com/arquivos/ids/366846-800-auto?v=637250949660300000&width=800&height=auto&aspect=true",
-      "precio": "89.00",
-      "titulo": "Silla ejecutiva con descansabrazos",
-      "descripcion": "Perfecta para el hogar o la oficina, nuestra colección de muebles es versátil y funcional. Cree una estación de trabajo cómoda e innovadora para que coincida con su estilo, ya sea moderno, contemporáneo o tradicional.",
-      "categoria": "Oficina"
-    },
-    {
-      "id": 17,
-      "imagen": "https://www.officedepot.com.sv/medias/32384.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MTg4ODI1fGltYWdlL2pwZWd8aGU4L2g0Zi85ODY3MTEzMzk4MzAyLmpwZ3w5YjhiZDI5YzQwNmMxMDY2MGY0YjgzNjJmNDQyZGEwNjI4YzFiNTNjNTZjMWEwY2UwMzlkMWVhYjMyZjhlMDBl",
-      "precio": "399.00",
-      "titulo": "ESCRITORIO EJECUTIVO BLANCO METAL",
-      "descripcion": "ESCRITORIO EJECUTIVOESTRUCTURA METALICA PINTADA ALHORNO.DISENO MODERNOPAD A",
-      "categoria": "Oficina"
-    },
-    {
-      "id": 18,
-      "imagen": "https://www.mobelart.com.sv/wp-content/uploads/2019/06/escritorios-oficina-mobelart.jpg",
-      "precio": "799.00",
-      "titulo": "Moderno Escritorio Ejecutivo",
-      "descripcion": "Nuestro modernos diseños de oficinas elegantes tienen un estilo original que acapara la atención de clientes y personal de trabajo, por cual, podemos ayudarte con el mobiliario de tu oficina y accesorios modernos, pero sobre todo poseer una marca de muebles que estén al acorde de la empresa.",
-      "categoria": "Oficina"
-    },
-    {
-      "id": 19,
-      "imagen": "https://www.officedepot.com.sv/medias/30921.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MTE2MjQ5fGltYWdlL2pwZWd8aDZkL2hjNC85Njg0MjczOTg3NjE0LmpwZ3wzYjlmZGRmYmZmNWJmOWY1NDU4OTg5NTI5ZDI0MzU0YWM2NzhkODFmMTE5YjM2MWFiNzE2ZTcwNjg1NzIwMGU3",
-      "precio": "249.90",
-      "titulo": "ESCRITORIO EJECUTIVO FIRST CLS",
-      "descripcion": "ESCRITORIO EJECUTIVOBLANCO LAQUEADO (ANTI RALLONES)ARCHIVERO CON 3 GAVETASACABADO BRILLANTEESTRUCTURA TUBULAR METALICAALTO: 75 CENTIMETOSANCHO: 120 CENTIMETROSFONDO: 60 CENTIMETROSPAD: A/B",
-      "categoria": "Oficina"
-    },
-    {
-      "id": 20,
-      "imagen": "https://www.officedepot.com.sv/medias/25471.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MTk4Mzg4fGltYWdlL2pwZWd8aGExL2gwZC85NjI4ODM1NDc5NTgyLmpwZ3w3NDYxYmZiNWZhZGRkYWM1YzVhYTBlZGFmY2JiZWRhYmJjYTFkZmRjZjc2YTJlYmY3MTRhNmMwZDhhNzI0NjY2",
-      "precio": "360.00",
-      "titulo": "Archivero 4 gavetas",
-      "descripcion": "ARCHIVERO PROFESIONAL TAMANO OFICIO CON 4 GAVETAS, JALADORES DE ACERO INOXIDABLE CON CERRADURA COLOR NEGRO, ACABADO ANTICORROSIVO FOSFATIZADO, PINTURA ELECTROESTATICA LIQUIDA HORNEADA DE ALTA RESISTENCIA.",
-      "categoria": "Oficina"
-    },
-    {
-      "titulo": "a",
-      "precio": "10.00",
-      "descripcion": "Caja magica",
-      "imagen": "https://midevocional.org/wp-content/uploads/2015/02/caja.jpg",
-      "categoria": "Dormitorio",
-      "id": 21
-    },
-    {
-      "titulo": "a2",
-      "precio": "10.00",
-      "descripcion": "Caja 2",
-      "imagen": "https://midevocional.org/wp-content/uploads/2015/02/caja.jpg",
-      "categoria": "Sala",
-      "id": 22
     }
   ]
 }

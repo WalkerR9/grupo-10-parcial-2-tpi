@@ -1,9 +1,5 @@
-var fila="<tr><td class='id'></td><td class='foto'></td><td class='price'></td><td class='title'></td><td class='description'></td><td class='category'></td></tr>";
+var fila="<tr><td class='id'></td><td class='foto'></td><td class='price'></td><td class='title'></td><td class='description'></td><td class='category'></td><td class='option'></td></tr>";
 	 var productos=null;
-	 function crearBoton(id){
-		 var boton="<button class='x' onclick='borrarProducto("+id+");'>Borrar</button>";
-         return boton;
-	 }
 	function obtenerProductos() {
 	  fetch('http://127.0.0.1:3000/muebleria')
             .then(res=>res.json())
@@ -47,22 +43,6 @@ function guardarProductos(){
 	window.setTimeout(obtenerProductos, 500);
 }
 
-function borrarProducto(id) {
-	var delresult;
-	var url='http://localhost:3000/muebleria/'+id;
-	
-	  fetch(url,{method:"DELETE"})
-            .then( res=>res.status)
-            .then(codigo=>{
-switch(codigo) {
-			case 200: alert("producto borrado");			         
-					  document.querySelector("inventario").click();
-					  break;
-			case 404: alert("producto no existe");break; }
-});	  	
-		 				 
-}
-
 
   function codigoCat(catstr) {
 	var code="null";
@@ -82,7 +62,7 @@ switch(codigo) {
 	  precio.setAttribute("onclick", "orden*=-1;listarProductos(productos);");
 	  var num=productos.length;
 	  var listado=document.getElementById("listado");
-	  var ids,titles,prices,descriptions,categories,fotos;
+	  var ids,titles,prices,descriptions,categories,fotos,accion;
 	  var tbody=document.getElementById("tbody"),nfila=0;
 	  tbody.innerHTML="";
 	  var catcode;
@@ -93,30 +73,43 @@ switch(codigo) {
 	  descriptions=document.getElementsByClassName("description");
 	  categories=document.getElementsByClassName("category");   
 	  fotos=document.getElementsByClassName("foto");   
-	  prices=document.getElementsByClassName("price");   
+	  prices=document.getElementsByClassName("price");
+	  accion=document.getElementsByClassName("option");   
 	  if(orden===0) {orden=-1;precio.innerHTML="Precio"}
-	  else
-	     if(orden==1) {ordenarAsc(productos,"price");precio.innerHTML="Precio A";precio.style.color="darkgreen"}
+	else
+	     if(orden==1) {ordenarAsc(productos,"precio");precio.innerHTML="Precio A";precio.style.color="darkgreen"}
 	     else 
-	       if(orden==-1) {ordenarDesc(productos,"price");precio.innerHTML="Precio D";precio.style.color="blue"}
+	       if(orden==-1) {ordenarDesc(productos,"precio");precio.innerHTML="Precio D";precio.style.color="blue"}
 	
-		  var boton="";
-	  	  listado.style.display="block";
-	  for(nfila=0;nfila<num;nfila++) {
-        ids[nfila].innerHTML=productos[nfila].id;
-		boton = crearBoton(productos[nfila].id);
-		titles[nfila].innerHTML=productos[nfila].titulo;
-		descriptions[nfila].innerHTML=productos[nfila].descripcion;
-		categories[nfila].innerHTML=productos[nfila].categoria+boton;
-		catcode=codigoCat(productos[nfila].categoria);
-		tr=categories[nfila].parentElement;
-		tr.setAttribute("class",catcode);
-		prices[nfila].innerHTML="$"+productos[nfila].precio;
-		fotos[nfila].innerHTML="<img src='"+productos[nfila].imagen+"'>";
-		fotos[nfila].firstChild.setAttribute("onclick","window.open('"+productos[nfila].imagen+"');" );
+	  	listado.style.display="block";
+	  	for(nfila=0;nfila<num;nfila++) {
+        	ids[nfila].innerHTML=productos[nfila].id;
+			titles[nfila].innerHTML=productos[nfila].titulo;
+			descriptions[nfila].innerHTML=productos[nfila].descripcion;
+			categories[nfila].innerHTML=productos[nfila].categoria;
+			catcode=codigoCat(productos[nfila].categoria);
+			tr=categories[nfila].parentElement;
+			tr.setAttribute("class",catcode);
+			prices[nfila].innerHTML="$"+productos[nfila].precio;
+			fotos[nfila].innerHTML="<img src='"+productos[nfila].imagen+"'>";
+			fotos[nfila].firstChild.setAttribute("onclick","window.open('"+productos[nfila].imagen+"');" );
+			accion[nfila].innerHTML = `<a class = boton-2 href = "#" value = ${productos[nfila].id} option = "eliminar">Eliminar</a>`;
 		}
 	}
 
+	tabla.addEventListener('click', (e) => {
+		e.preventDefault();
+		if(e.target.getAttribute('option') === 'eliminar') {
+		fetch(`http://127.0.0.1:3000/muebleria/${e.target.getAttribute('value')}`, {
+			method: "DELETE",
+		})
+		.then(response => response.json())
+		.then(data => {
+			orden=0;
+			alert("El producto se ha eliminado");
+		})
+		}
+	});
 
 function ordenarDesc(p_array_json, p_key) {
    p_array_json.sort(function (a, b) {
