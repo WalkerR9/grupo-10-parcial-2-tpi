@@ -19,28 +19,12 @@
   ],
   "muebleria": [
     {
-      "id": 3,
-      "imagen": "https://siman.vtexassets.com/arquivos/ids/343460-800-auto?v=637250750976970000&width=800&height=auto&aspect=true",
-      "precio": "549.00",
-      "titulo": "Camarote full",
-      "descripcion": "Camarote full full",
-      "categoria": "Dormitorio"
-    },
-    {
       "id": 5,
       "imagen": "https://siman.vtexassets.com/arquivos/ids/348565-800-auto?v=637250792876070000&width=800&height=auto&aspect=true",
       "precio": "199.00",
       "titulo": "Ropero 4 puertas 2 gavetas multicolor",
       "descripcion": "Ropero de 4 puertas y 2 gavetas multicolor, dentro cuenta con 3 estantes sobre las gavetas, y a un lado cuenta con dos espacios para guardar la ropa colgada y los zapatos en el espacio inferior.",
       "categoria": "Dormitorio"
-    },
-    {
-      "id": 7,
-      "imagen": "https://siman.vtexassets.com/arquivos/ids/348714-800-auto?v=637250793809930000&width=800&height=auto&aspect=true",
-      "precio": "349.00",
-      "titulo": "Sillón reclinable con mecedora",
-      "descripcion": "Con este sillón individual podrás crear un ambiente único para compartir momentos inolvidables con tus familiares y amigos, ademas gracias a que tiene un diseño increíble le brindara un toque de modernidad y estilo a tus espacios.",
-      "categoria": "Reclinables"
     },
     {
       "id": 8,

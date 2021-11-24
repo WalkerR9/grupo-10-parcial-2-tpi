@@ -93,13 +93,13 @@ function guardarProductos(){
 			prices[nfila].innerHTML="$"+productos[nfila].precio;
 			fotos[nfila].innerHTML="<img src='"+productos[nfila].imagen+"'>";
 			fotos[nfila].firstChild.setAttribute("onclick","window.open('"+productos[nfila].imagen+"');" );
-			accion[nfila].innerHTML = `<a class = boton-2 href = "#" value = ${productos[nfila].id} option = "eliminar">Eliminar</a>`;
+			accion[nfila].innerHTML = `<button class = "eliminar" href = "#" value = ${productos[nfila].id}>Eliminar</button><button class = modificar href = "#" value = ${productos[nfila]}>Modificar</button>`;
 		}
 	}
 
 	tabla.addEventListener('click', (e) => {
 		e.preventDefault();
-		if(e.target.getAttribute('option') === 'eliminar') {
+		if(e.target.matches('.eliminar')) {
 		fetch(`http://127.0.0.1:3000/muebleria/${e.target.getAttribute('value')}`, {
 			method: "DELETE",
 		})
@@ -108,6 +108,12 @@ function guardarProductos(){
 			orden=0;
 			alert("El producto se ha eliminado");
 		})
+		}
+		if(e.target.matches('.modificar')) {
+			document.getElementById("nombre").value = e.target.value.titulo;
+			document.getElementById("precio").value = e.target.value.precio;
+			document.getElementById("descripcion").value =  e.target.value.descripcion;		
+			document.getElementById("imagen").value =  e.target.value.imagen;
 		}
 	});
 
