@@ -19,12 +19,12 @@
   ],
   "muebleria": [
     {
-      "id": 5,
-      "imagen": "https://siman.vtexassets.com/arquivos/ids/348565-800-auto?v=637250792876070000&width=800&height=auto&aspect=true",
-      "precio": "199.00",
+      "foto": "<img src=\"undefined\" onclick=\"window.open('undefined');\">",
+      "precio": "10.00",
       "titulo": "Ropero 4 puertas 2 gavetas multicolor",
-      "descripcion": "Ropero de 4 puertas y 2 gavetas multicolor, dentro cuenta con 3 estantes sobre las gavetas, y a un lado cuenta con dos espacios para guardar la ropa colgada y los zapatos en el espacio inferior.",
-      "categoria": "Dormitorio"
+      "descripcion": "a",
+      "categoria": "Sala",
+      "id": 5
     },
     {
       "id": 8,

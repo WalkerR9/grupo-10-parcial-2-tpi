@@ -90,7 +90,7 @@ function guardarProductos(){
 			catcode=codigoCat(productos[nfila].categoria);
 			tr=categories[nfila].parentElement;
 			tr.setAttribute("class",catcode);
-			prices[nfila].innerHTML="$"+productos[nfila].precio;
+			prices[nfila].innerHTML=productos[nfila].precio;
 			fotos[nfila].innerHTML="<img src='"+productos[nfila].imagen+"'>";
 			fotos[nfila].firstChild.setAttribute("onclick","window.open('"+productos[nfila].imagen+"');" );
 			accion[nfila].innerHTML = `<button class = "eliminar" href = "#" value = ${productos[nfila].id}>Eliminar</button><button class = modificar href = "#" value = ${productos[nfila]}>Modificar</button>`;
@@ -109,13 +109,55 @@ function guardarProductos(){
 			alert("El producto se ha eliminado");
 		})
 		}
-		if(e.target.matches('.modificar')) {
+		/*if(e.target.matches('.modificar')) {
 			document.getElementById("nombre").value = e.target.value.titulo;
 			document.getElementById("precio").value = e.target.value.precio;
 			document.getElementById("descripcion").value =  e.target.value.descripcion;		
 			document.getElementById("imagen").value =  e.target.value.imagen;
-		}
+		}*/
 	});
+
+	const on = (element, event, selector, handler) =>{
+		element.addEventListener(event, e =>{
+			if(e.target.closest(selector)){
+				handler(e);
+			}
+		})
+	}
+
+	let id;
+	on(document, 'click', '.modificar', e => {
+		const fila = e.target.parentNode.parentNode;
+	 	id = fila.children[0].innerHTML;
+		const foto = fila.children[1].innerHTML;
+		const precio = fila.children[2].innerHTML;
+		const titulo = fila.children[3].innerHTML;
+		const descripcion = fila.children[4].innerHTML;
+		const categoria = fila.children[5].innerHTML;
+		document.getElementById("nombre").value = titulo;
+		document.getElementById("precio").value = precio;
+		document.getElementById("descripcion").value = descripcion;
+		document.getElementById("categoria").value = categoria;
+		document.getElementById("imagen").value = foto;
+	});
+
+	function modificarProductos() {
+		fetch('http://127.0.0.1:3000/muebleria/'+id,{
+			method : 'PUT',
+			headers: {
+				'Content-Type' : 'application/json'
+			},
+			body: JSON.stringify({
+				foto:document.getElementById("imagen").value,
+				precio:document.getElementById("precio").value,
+				titulo:document.getElementById("nombre").value,
+				descripcion:document.getElementById("descripcion").value,
+				categoria:document.getElementById("categoria").value
+			})
+		})
+		.then( response => response.json())
+		.then( response => location.reload())
+	}
 
 function ordenarDesc(p_array_json, p_key) {
    p_array_json.sort(function (a, b) {
