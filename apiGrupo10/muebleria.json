@@ -20,10 +20,9 @@
   "muebleria": [
     {
       "id": 1,
-      "imagen": "https://siman.vtexassets.com/arquivos/ids/348763-800-auto?v=637250794114600000&width=800&height=auto&aspect=true",
+      "titulo": "Ropero 3 puertas corredizas XD XD",
       "precio": "279.00",
-      "titulo": "Ropero 3 puertas corredizas",
-      "descripcion": "El producto cuenta con amplio espacio interno, acompañado de 3 cajones, 2 perchas de madera acabadas en gris y un lugar para zapatos en la parte inferior.",
+      "descripcion": "El producto cuenta con amplio espacio interno, acompañado de 3 cajones, 2 perchas de madera acabadas en gris y un lugar para zapatos en la parte inferior. SI O NO",
       "categoria": "Dormitorio"
     },
     {
@@ -161,6 +160,34 @@
       "titulo": "Archivero 4 gavetas",
       "descripcion": "ARCHIVERO PROFESIONAL TAMANO OFICIO CON 4 GAVETAS, JALADORES DE ACERO INOXIDABLE CON CERRADURA COLOR NEGRO, ACABADO ANTICORROSIVO FOSFATIZADO, PINTURA ELECTROESTATICA LIQUIDA HORNEADA DE ALTA RESISTENCIA.",
       "categoria": "Oficina"
+    },
+    {
+      "titulo": "asdas",
+      "precio": "100",
+      "descripcion": "asdasda",
+      "categoria": "Oficina",
+      "id": 21
+    },
+    {
+      "titulo": "asdas",
+      "precio": "100",
+      "descripcion": "asdasda",
+      "categoria": "Oficina",
+      "id": 22
+    },
+    {
+      "titulo": "asdas",
+      "precio": "100",
+      "descripcion": "asdasda",
+      "categoria": "Oficina",
+      "id": 23
+    },
+    {
+      "titulo": "asdasasda",
+      "precio": "100",
+      "descripcion": "asdasda",
+      "categoria": "Oficina",
+      "id": 24
     }
   ]
 }

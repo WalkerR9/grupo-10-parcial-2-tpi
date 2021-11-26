@@ -6,9 +6,10 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="appGrupo10/css/bootstrap.min.css">
 	<script src="appGrupo10/js/bootstrap.bundle.min.js"></script>
+	<script src="appGrupo10/js/codigo.js"></script>
 </head>
 
-<body>
+<body onload="getMueble()">
 
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: brown;">
 		<div class="container-fluid">
@@ -27,74 +28,151 @@
 						<a class="nav-link" aria-current="page" href="muebles.html">Muebles</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="contactanos.html">Contactanos</a>
+						<a class="nav-link" aria-current="page" href="admin.html">Admin</a>
 					</li>
 				</ul>
-				<form class="d-flex">
-					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-light" type="submit">Search</button>
-				</form>
 			</div>
 		</div>
 	</nav>
+	<br><br>
+	<div class="container-md">
+		<div class="row">
+			<div class="col-8">
+				<span class="display-5">ACTUALIZAR MUEBLE : <span id="cabeza" class="fw-bold"></span> </span>
+				<br><br>
 
-	
+					<input type="hidden" id="id">
+					<div class="col-12">
+						<label for="titulo" class="form-label">Titulo</label>
+						<input type="text" class="form-control" id="titulo" placeholder="Mueble 1" required>
+					</div>
+					<div class="col-12">
+						<label for="precio" class="form-label">Precio</label>
+						<div class="input-group mb-3">
+							<span class="input-group-text">$</span>
+							<input type="number" class="form-control" id="precio" placeholder="0.00" required>
+						</div>
+					</div>
+
+					<div class="col-12">
+						<label for="descripcion" class="form-label">Descripcion:</label>
+						<textarea name="" class="form-control" id="descripcion" cols="30" rows="5" required></textarea>
+					</div>
+
+					<div class="col-12">
+						<label for="categoria" class="form-label">Categoria:</label>
+						<select class="form-select form-select-lg mb-3" id="categoria">
+							<option value="Dormitorio" selected>Dormitorio</option>
+							<option value="Reclinables">Reclinables</option>
+							<option value="Sala">Sala</option>
+							<option value="Oficina">Oficina</option>
+						</select>
+					</div>
+
+					<div class="row">
+						<div class="col-4">
+							<div class="d-grid gap-2">
+								<button type="submit" class="btn btn-primary" onclick="updateMueble()">Actulizar</button>
+							</div>
+						</div>
+						<div class="col-4"></div>
+						<div class="col-4">
+							<div class="d-grid gap-2">
+								<a href="admin.html" class="btn btn-warning">Regresar</a>
+							</div>
+						</div>
+					</div>
+					
+			</div>
+		</div>
+	</div>
+	<br><br><br>
+
+	<script>
+		function updateMueble() {
+			var cod=document.getElementById('id').value;
+			let producto = {
+				id: cod,
+				titulo: document.getElementById("titulo").value,
+				precio: document.getElementById("precio").value,
+				descripcion: document.getElementById("descripcion").value,
+				categoria: document.getElementById("categoria").value,
+			}
+			let data = JSON.stringify(producto);
+
+			fetch('http://localhost:3000/muebleria'+'/'+cod, {
+				method: 'PUT', // or 'PUT'
+				body: data, // data can be `string` or {object}!
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			}).then(res => {
+				res.json();
+				location.reload();
+			})
+				.catch(error =>
+					console.error('Error:', error)
+				);
+		}
+	</script>
+
+
 
 
 	<!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container-fluid>
+	<div class="container-fluid>
 
-	<footer class="bg-light text-center">
-	<!-- Grid container -->
-	<div class="container p-4 pb-0">
-	  <!-- Section: Form -->
-	  <section class="">
-		<form action="">
-		  <!--Grid row-->
-		  <div class="row d-flex justify-content-center">
-			<!--Grid column-->
-			<div class="col-auto">
-			  <p class="pt-2">
-				<strong>Sign up for our newsletter</strong>
-			  </p>
-			</div>
-			<!--Grid column-->
-  
-			<!--Grid column-->
-			<div class="col-md-5 col-12">
-			  <!-- Email input -->
-			  <div class="form-outline mb-4">
-				<input type="email" id="form5Example2" class="form-control" />
-				<label class="form-label" for="form5Example2">Email address</label>
-			  </div>
-			</div>
-			<!--Grid column-->
-  
-			<!--Grid column-->
-			<div class="col-auto">
-			  <!-- Submit button -->
-			  <button type="submit" class="btn btn-primary mb-4">
-				Subscribe
-			  </button>
-			</div>
-			<!--Grid column-->
-		  </div>
-		  <!--Grid row-->
-		</form>
-	  </section>
-	  <!-- Section: Form -->
+	<footer class=" bg-light text-center">
+		<!-- Grid container -->
+		<div class="container p-4 pb-0">
+			<!-- Section: Form -->
+			<section class="">
+				<form action="">
+					<!--Grid row-->
+					<div class="row d-flex justify-content-center">
+						<!--Grid column-->
+						<div class="col-auto">
+							<p class="pt-2">
+								<strong>Sign up for our newsletter</strong>
+							</p>
+						</div>
+						<!--Grid column-->
+
+						<!--Grid column-->
+						<div class="col-md-5 col-12">
+							<!-- Email input -->
+							<div class="form-outline mb-4">
+								<input type="email" id="form5Example2" class="form-control" />
+								<label class="form-label" for="form5Example2">Email address</label>
+							</div>
+						</div>
+						<!--Grid column-->
+
+						<!--Grid column-->
+						<div class="col-auto">
+							<!-- Submit button -->
+							<button type="submit" class="btn btn-primary mb-4">
+								Subscribe
+							</button>
+						</div>
+						<!--Grid column-->
+					</div>
+					<!--Grid row-->
+				</form>
+			</section>
+			<!-- Section: Form -->
+		</div>
+		<!-- Grid container -->
+
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+			© 2020 Copyright:
+			<a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+		</div>
+		<!-- Copyright -->
+		</footer>
+
 	</div>
-	<!-- Grid container -->
-  
-	<!-- Copyright -->
-	<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-	  © 2020 Copyright:
-	  <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-	</div>
-	<!-- Copyright -->
-  </footer>
-	
-  </div>
 </body>
 
 </html>
