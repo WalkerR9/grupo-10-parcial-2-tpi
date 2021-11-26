@@ -38,51 +38,64 @@
 	<div class="container-md">
 		<div class="row">
 			<div class="col-8">
-				<span class="display-5">ACTUALIZAR MUEBLE : <span id="cabeza" class="fw-bold"></span> </span>
+				<div class="row">
+					<div class="col-8">
+						<span class="display-5">ACTUALIZAR MUEBLE : <span id="cabeza" class="fw-bold"></span> </span>
+					</div>
+					<div class="col-4">
+						<a href="" class="d-block p-2 btn btn-success" id="ver">Ver Articulo>></a>
+					</div> 
+				</div>
+
+
 				<br><br>
 
-					<input type="hidden" id="id">
-					<div class="col-12">
-						<label for="titulo" class="form-label">Titulo</label>
-						<input type="text" class="form-control" id="titulo" placeholder="Mueble 1" required>
+				<input type="hidden" id="id">
+				<div class="col-12">
+					<label for="titulo" class="form-label">Titulo</label>
+					<input type="text" class="form-control" id="titulo" placeholder="Mueble 1" required>
+				</div>
+				<div class="col-12">
+					<label for="precio" class="form-label">Precio</label>
+					<div class="input-group mb-3">
+						<span class="input-group-text">$</span>
+						<input type="number" class="form-control" id="precio" placeholder="0.00" required>
 					</div>
-					<div class="col-12">
-						<label for="precio" class="form-label">Precio</label>
-						<div class="input-group mb-3">
-							<span class="input-group-text">$</span>
-							<input type="number" class="form-control" id="precio" placeholder="0.00" required>
+				</div>
+
+				<div class="col-12">
+					<label for="descripcion" class="form-label">Descripcion:</label>
+					<textarea name="" class="form-control" id="descripcion" cols="30" rows="5" required></textarea>
+				</div>
+				<div class="col-12">
+					<label for="descripcion" class="form-label">URL:</label>
+					<input type="text" class="form-control" id="url" placeholder="http://ejemplo.com" required>
+				</div>
+
+				<div class="col-12">
+					<label for="categoria" class="form-label">Categoria:</label>
+					<select class="form-select form-select-lg mb-3" id="categoria">
+						<option value="Dormitorio" selected>Dormitorio</option>
+						<option value="Reclinables">Reclinables</option>
+						<option value="Sala">Sala</option>
+						<option value="Oficina">Oficina</option>
+					</select>
+				</div>
+
+				<div class="row">
+					<div class="col-4">
+						<div class="d-grid gap-2">
+							<button type="submit" class="btn btn-primary" onclick="updateMueble()">Actulizar</button>
 						</div>
 					</div>
-
-					<div class="col-12">
-						<label for="descripcion" class="form-label">Descripcion:</label>
-						<textarea name="" class="form-control" id="descripcion" cols="30" rows="5" required></textarea>
-					</div>
-
-					<div class="col-12">
-						<label for="categoria" class="form-label">Categoria:</label>
-						<select class="form-select form-select-lg mb-3" id="categoria">
-							<option value="Dormitorio" selected>Dormitorio</option>
-							<option value="Reclinables">Reclinables</option>
-							<option value="Sala">Sala</option>
-							<option value="Oficina">Oficina</option>
-						</select>
-					</div>
-
-					<div class="row">
-						<div class="col-4">
-							<div class="d-grid gap-2">
-								<button type="submit" class="btn btn-primary" onclick="updateMueble()">Actulizar</button>
-							</div>
-						</div>
-						<div class="col-4"></div>
-						<div class="col-4">
-							<div class="d-grid gap-2">
-								<a href="admin.html" class="btn btn-warning">Regresar</a>
-							</div>
+					<div class="col-4"></div>
+					<div class="col-4">
+						<div class="d-grid gap-2">
+							<a href="admin.html" class="btn btn-warning">Regresar</a>
 						</div>
 					</div>
-					
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -90,17 +103,18 @@
 
 	<script>
 		function updateMueble() {
-			var cod=document.getElementById('id').value;
+			var cod = document.getElementById('id').value;
 			let producto = {
 				id: cod,
 				titulo: document.getElementById("titulo").value,
 				precio: document.getElementById("precio").value,
+				imagen: document.getElementById("url").value,
 				descripcion: document.getElementById("descripcion").value,
 				categoria: document.getElementById("categoria").value,
 			}
 			let data = JSON.stringify(producto);
 
-			fetch('http://localhost:3000/muebleria'+'/'+cod, {
+			fetch('http://localhost:3000/muebleria' + '/' + cod, {
 				method: 'PUT', // or 'PUT'
 				body: data, // data can be `string` or {object}!
 				headers: {

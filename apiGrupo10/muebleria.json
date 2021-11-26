@@ -188,6 +188,22 @@
       "descripcion": "asdasda",
       "categoria": "Oficina",
       "id": 24
+    },
+    {
+      "titulo": "La prueba de la imagen",
+      "precio": "200",
+      "imagen": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmovilforum.com%2Ffondos-de-pantalla-4k%2F&psig=AOvVaw1Od5AW4ZbzKaOPX8MyfieF&ust=1638031871461000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNiq17C-tvQCFQAAAAAdAAAAABAJ",
+      "descripcion": "Esta es una prueba de parametros",
+      "categoria": "Sala",
+      "id": 25
+    },
+    {
+      "id": 26,
+      "titulo": "Prueba de imagen 2",
+      "precio": "200",
+      "imagen": "https://i0.wp.com/hipertextual.com/wp-content/uploads/2013/11/Wallpaper-Monta%C3%B1as.jpg?w=1560&ssl=1",
+      "descripcion": "ES es la prueba 2 de imagen",
+      "categoria": "Oficina"
     }
   ]
 }

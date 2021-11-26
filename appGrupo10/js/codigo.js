@@ -134,6 +134,7 @@ function addMueble() {
 	let producto = {
 		titulo: document.getElementById("titulo").value,
 		precio: document.getElementById("precio").value,
+		imagen:document.getElementById("url").value,
 		descripcion: document.getElementById("descripcion").value,
 		categoria: document.getElementById("categoria").value,
 	}
@@ -184,6 +185,8 @@ function getMueble() {
 	function setProducto(data) {
 		document.getElementById('id').value = data.id;
 		document.getElementById('titulo').value = data.titulo;
+		document.getElementById('ver').href="ver.html?id="+data.id
+		document.getElementById("url").value= data.imagen,
 		document.getElementById('precio').value = data.precio;
 		document.getElementById('descripcion').value = data.descripcion;
 		document.getElementById('categoria').value = data.categoria;
