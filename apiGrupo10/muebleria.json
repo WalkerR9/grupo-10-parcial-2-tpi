@@ -19,28 +19,20 @@
   ],
   "muebleria": [
     {
-      "foto": "<img src=\"undefined\" onclick=\"window.open('undefined');\">",
-      "precio": "10.00",
-      "titulo": "Ropero 4 puertas 2 gavetas multicolor",
-      "descripcion": "a",
-      "categoria": "Sala",
-      "id": 5
-    },
-    {
-      "id": 8,
       "imagen": "https://siman.vtexassets.com/arquivos/ids/348697-800-auto?v=637250793669500000&width=800&height=auto&aspect=true",
-      "precio": "799.00",
-      "titulo": "Sofá reclinable",
+      "precio": "799",
+      "titulo": "Se pudo",
       "descripcion": "sofá reclinable mocha, color gris, dipone de 3 plazas. Ideal para combinar con la decoración de tu sala.",
-      "categoria": "Reclinables"
+      "categoria": "Reclinables",
+      "id": 8
     },
     {
-      "id": 9,
       "imagen": "https://siman.vtexassets.com/arquivos/ids/838844-800-auto?v=637363007079830000&width=800&height=auto&aspect=true",
-      "precio": "579.00",
-      "titulo": "Love seat reclinable Rivo gris",
+      "precio": "579",
+      "titulo": "si",
       "descripcion": "Con un tejido agradable, lo pasará genial en el sofá de dos plazas reclinable Rivo. Reclínese hacia atrás en infinitas posiciones para mayor comodidad. Los brazos con forma de almohada harán que nunca quieras irte. El diseño de la espalda en forma de cascada y los lados redondeados añaden mucho estilo a la función de este sofá de dos plazas reclinable.",
-      "categoria": "Reclinables"
+      "categoria": "Reclinables",
+      "id": 9
     },
     {
       "id": 10,
@@ -67,12 +59,12 @@
       "categoria": "Sala"
     },
     {
-      "id": 15,
-      "imagen": "https://lcoimgprod-grupounicomer.netdna-ssl.com/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/l/a/lasf3019sala.jpg",
-      "precio": "1000.00",
-      "titulo": "Commodity Juego de sala para Terraza / LASF3019SALA / Acero",
-      "descripcion": "El mueble perfecto para tu terraza lo tiene Commodity con el Juego de sala para terraza LASF3019SALA, esta diseñado con 2 sillones individuales, 1 love seat y 1 mesita. Su estructura de acero, pintura electrostática, sillas de ratán plano, cojinería en poliéster y mesa con top de vidrio templado.",
-      "categoria": "Sala"
+      "titulo": "prueba2",
+      "precio": "799",
+      "descripcion": "sofá reclinable mocha, color gris, dipone de 3 plazas. Ideal para combinar con la decoración de tu sala.",
+      "imagen": "https://siman.vtexassets.com/arquivos/ids/348697-800-auto?v=637250793669500000&width=800&height=auto&aspect=true",
+      "categoria": "Reclinables",
+      "id": 16
     }
   ]
 }

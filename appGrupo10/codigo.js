@@ -129,7 +129,7 @@ function guardarProductos(){
 	on(document, 'click', '.modificar', e => {
 		const fila = e.target.parentNode.parentNode;
 	 	id = fila.children[0].innerHTML;
-		const foto = fila.children[1].innerHTML;
+		const foto = fila.children[1].children[0].getAttribute("src");
 		const precio = fila.children[2].innerHTML;
 		const titulo = fila.children[3].innerHTML;
 		const descripcion = fila.children[4].innerHTML;
@@ -148,7 +148,7 @@ function guardarProductos(){
 				'Content-Type' : 'application/json'
 			},
 			body: JSON.stringify({
-				foto:document.getElementById("imagen").value,
+				imagen:document.getElementById("imagen").value,
 				precio:document.getElementById("precio").value,
 				titulo:document.getElementById("nombre").value,
 				descripcion:document.getElementById("descripcion").value,
