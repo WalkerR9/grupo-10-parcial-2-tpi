@@ -58,7 +58,10 @@ function guardar(productos) {
 
 		let img = "<a href=\"" + foto + "\" target=\"_blank\"><img src=\"" + foto + "\" class=\"img-thumbnail\"  width=\"100\" height=\"100\"></a>";
 
-		var fila = "<td>" + id + "</td><td>" + img + "</td><td>$" + precio + "</td><td>" + titulo + "</td><td>" + descripcion + "</td><td>" + categoria + "</td> <td>" + boton + "</td>";
+		var url = productos[i].url;
+
+		var fila = "<td>" + id + "</td><td>" + img + "</td><td>$" + precio + "</td><td>" + titulo + "</td><td>" + descripcion + "</td><td>" + categoria + "</td><td><iframe src=\""+url+"\" frameborder=\"0\"></iframe></td> <td>" + boton + "</td>";
+
 
 		var btn = document.createElement("tr");
 		btn.innerHTML = fila;
