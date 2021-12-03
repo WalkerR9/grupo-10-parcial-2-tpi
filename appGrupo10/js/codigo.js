@@ -58,7 +58,7 @@ function guardar(productos) {
 
 		let img = "<a href=\"" + foto + "\" target=\"_blank\"><img src=\"" + foto + "\" class=\"img-thumbnail\"  width=\"100\" height=\"100\"></a>";
 
-		var url = productos[i].url; //yo
+		var url = productos[i].Video; //yo
 
 		var fila = "<td>" + id + "</td><td>" + img + "</td><td>$" + precio + "</td><td>" + titulo + "</td><td>" + descripcion + "</td><td>" + categoria + "</td><td><iframe src=\""+url+"\" frameborder=\"0\"></iframe></td> <td>" + boton + "</td>";
 
@@ -139,6 +139,7 @@ function addMueble() {
 		precio: document.getElementById("precio").value,
 		imagen:document.getElementById("url").value,
 		descripcion: document.getElementById("descripcion").value,
+		video:document.getElementById("Video").value,
 		categoria: document.getElementById("categoria").value,
 	}
 	let data = JSON.stringify(producto);
