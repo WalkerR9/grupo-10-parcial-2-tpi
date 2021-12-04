@@ -74,7 +74,7 @@
 
 				<div class="col-12">
 					<label for="descripcion" class="form-label">URL VIDEO:</label>
-					<input type="text" class="form-control" id="Video" placeholder="http://ejemplo.com" required>
+					<input type="text" class="form-control" id="video" placeholder="http://ejemplo.com" required>
 				</div>
 
 				<div class="col-12">
@@ -105,39 +105,6 @@
 		</div>
 	</div>
 	<br><br><br>
-
-	<script>
-		function updateMueble() {
-			var cod = document.getElementById('id').value;
-			let producto = {
-				id: cod,
-				titulo: document.getElementById("titulo").value,
-				precio: document.getElementById("precio").value,
-				imagen: document.getElementById("url").value,
-				descripcion: document.getElementById("descripcion").value,
-				categoria: document.getElementById("categoria").value,
-			}
-			let data = JSON.stringify(producto);
-
-			fetch('http://localhost:3000/muebleria' + '/' + cod, {
-				method: 'PUT', // or 'PUT'
-				body: data, // data can be `string` or {object}!
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			}).then(res => {
-				res.json();
-				location.reload();
-			})
-				.catch(error =>
-					console.error('Error:', error)
-				);
-		}
-	</script>
-
-
-
-
 	<!-- Remove the container if you want to extend the Footer to full width. -->
 	<div class="container-fluid>
 

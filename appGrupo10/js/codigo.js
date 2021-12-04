@@ -58,7 +58,7 @@ function guardar(productos) {
 
 		let img = "<a href=\"" + foto + "\" target=\"_blank\"><img src=\"" + foto + "\" class=\"img-thumbnail\"  width=\"100\" height=\"100\"></a>";
 
-		var url = productos[i].Video; //yo
+		var url = productos[i].video; //yo
 
 		var fila = "<td>" + id + "</td><td>" + img + "</td><td>$" + precio + "</td><td>" + titulo + "</td><td>" + descripcion + "</td><td>" + categoria + "</td><td><iframe src=\""+url+"\" frameborder=\"0\"></iframe></td> <td>" + boton + "</td>";
 
@@ -139,7 +139,7 @@ function addMueble() {
 		precio: document.getElementById("precio").value,
 		imagen:document.getElementById("url").value,
 		descripcion: document.getElementById("descripcion").value,
-		video:document.getElementById("Video").value,
+		video:document.getElementById("video").value,
 		categoria: document.getElementById("categoria").value,
 	}
 	let data = JSON.stringify(producto);
@@ -156,8 +156,6 @@ function addMueble() {
 	}).catch(error =>
 			console.error('Error:', error)
 	);
-
-
 }
 
 
@@ -194,7 +192,40 @@ function getMueble() {
 		document.getElementById('precio').value = data.precio;
 		document.getElementById('descripcion').value = data.descripcion;
 		document.getElementById('categoria').value = data.categoria;
+		document.getElementById('video').value=data.video;
 	}
+}
+
+function updateMueble() {
+	var cod = document.getElementById('id').value;
+	let producto = {
+		id: cod,
+		titulo: document.getElementById("titulo").value,
+		precio: document.getElementById("precio").value,
+		imagen: document.getElementById("url").value,
+		descripcion: document.getElementById("descripcion").value,
+		categoria: document.getElementById("categoria").value,
+		video:document.getElementById('video').value
+	}
+	let data = JSON.stringify(producto);
+
+	if(confirm("Se Actualizaran los datos: Desea Proseguir?")){
+		fetch('http://localhost:3000/muebleria' + '/' + cod, {
+		method: 'PUT', // or 'PUT'
+		body: data, // data can be `string` or {object}!
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	}).then(res => {
+		res.json();
+		location.reload();
+	})
+		.catch(error =>
+			console.error('Error:', error)
+		);
+	}
+
+	
 }
 
 
